@@ -14,7 +14,7 @@
       <details>
         <summary><strong>🇨🇳 中文</strong></summary>
 
-## 为什么选这个？
+## 为什么选这个？ 
 
 GitHub 上已有 1400+ 个 Skills，但 **70% 不合格**——要么臃肿不堪、要么描述模糊、要么一个 Skill 塞了五件事。真正能留下来日常使用的不到 10 个。
 
