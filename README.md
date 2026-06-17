@@ -1,18 +1,123 @@
 <div align="center">
   <h1>dev-daily-skills</h1>
   <p>
-    <strong>装这一个包，解决日常 80% 的编码烦恼。</strong><br>
-    <em>One package, 80% of your daily coding friction — gone.</em>
+    <strong>One package, 80% of your daily coding friction — gone.</strong><br>
+    <sub>装这一个包，解决日常 80% 的编码烦恼。</sub>
   </p>
 </div>
 
 ---
 
-<table align="center">
-  <tr>
-    <td align="center">
-      <details>
-        <summary><strong>🇨🇳 中文</strong></summary>
+There are 1400+ Skills on GitHub, but **70% are subpar** — bloated, vaguely described, or one Skill doing five things. Fewer than 10 survive daily use.
+
+`dev-daily-skills` only includes skills you'll **actually use every day**:
+
+- **Single-purpose** — One Skill, one problem
+- **Precise triggers** — Descriptions use phrases real people say
+- **Hard gates** — Critical steps are enforced via `<HARD-GATE>`, not suggested
+- **Examples included** — Do-this-not-that examples in every skill
+
+---
+
+## Installation
+
+```bash
+# Clone to project-level skills directory
+git clone https://github.com/yinboliu-git/dev-daily-skills.git .claude/skills/dev-daily-skills
+
+# Or clone to personal skills directory (available across all projects)
+git clone https://github.com/yinboliu-git/dev-daily-skills.git ~/.claude/skills/dev-daily-skills
+```
+
+## What's Inside
+
+| Skill | Trigger | Problem Solved |
+|-------|---------|---------------|
+| **git-commit** | "commit my changes" | Never stare at a blank commit message again |
+| **systematic-debug** | "debug this" | Observe → Hypothesize → Test → Fix. No more guessing. |
+| **safe-refactor** | "refactor this" | No tests? No refactor. Change, verify, repeat. |
+| **code-review** | "review my code" | Severity-ranked: correctness > security > performance > style |
+| **doc-generator** | "document this function" | Documents purpose and contract, not syntax. |
+| **test-first** | "write tests" | RED → GREEN → REFACTOR. No code before a failing test. |
+| **pr-description** | "create a PR" | Structured PR description from your branch diff. |
+
+## Usage Examples
+
+**Daily Commit**
+```
+You: commit my changes
+Claude: generates Conventional Commits message, asks whether to commit
+```
+
+**Debugging**
+```
+You: debug this — the login page doesn't redirect after submit
+Claude: Observe → Hypothesize → Test → Fix
+```
+
+**Test Before Refactor**
+```
+You: write tests for the payment module, then refactor it
+Claude: test-first → safe-refactor, two skills chained automatically
+```
+
+**Pre-PR Checklist**
+```
+You: review my changes, then create a PR
+Claude: code-review → pr-description, one-stop PR readiness
+```
+
+## Design Principles
+
+Every skill follows community-validated best practices:
+
+1. **Generate first, clarify second** — Output immediately, flag assumptions after
+2. **Hard gates at critical checkpoints** — Non-negotiable enforcement (e.g., no refactor without tests)
+3. **Anti-pattern side-by-side** — DON'T/DO tables, not paragraphs
+4. **Quality Checklist** — Self-audit before delivering
+5. **Under 200 lines** — Brevity is a feature
+
+## File Structure
+
+```
+dev-daily-skills/
+├── README.md
+└── skills/
+    ├── git-commit/SKILL.md
+    ├── systematic-debug/SKILL.md
+    ├── safe-refactor/SKILL.md
+    ├── code-review/SKILL.md
+    ├── doc-generator/SKILL.md
+    ├── test-first/SKILL.md
+    └── pr-description/SKILL.md
+```
+
+## Complementary Projects
+
+`dev-daily-skills` focuses on **high-frequency daily tasks**. It complements rather than competes with:
+
+| Project | Star | Positioning | Relationship |
+|---------|------|------------|-------------|
+| [superpowers](https://github.com/obra/superpowers) | ~204K | Full SDLC workflow | They handle epics; we handle micro-tasks |
+| [agent-skills](https://github.com/addyosmani/agent-skills) | ~50K | Production-grade practices | They set standards; we boost efficiency |
+| [karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) | ~133K | LLM coding wisdom distilled | They teach philosophy; we ship workflows |
+| [vibe-check-skill](https://github.com/yinboliu-git/vibe-check-skill) | — | AI code quality audit | vibe-check scores quality; daily-skills executes daily tasks |
+
+## Contributing
+
+PRs welcome. Before submitting:
+
+- [ ] Single-purpose: one Skill, one job
+- [ ] Description includes real phrases users actually say
+- [ ] Hard gates on unskippable steps
+- [ ] Complete quality checklist present
+- [ ] At least one example showing correct usage
+- [ ] Under 200 lines
+
+---
+
+<details>
+<summary><strong>🇨🇳 中文版本</strong></summary>
 
 ## 为什么选这个？ 
 
@@ -107,6 +212,7 @@ dev-daily-skills/
 | [superpowers](https://github.com/obra/superpowers) | ~204K | 完整软件工程流程 | superpowers 管完整流程，我们管零散日常 |
 | [agent-skills](https://github.com/addyosmani/agent-skills) | ~50K | Google 工程师的生产级规范 | 他们是工程规范，我们是日常操作 |
 | [karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) | ~133K | LLM 编码教训蒸馏 | 他们是 AI 哲学，我们是具体流程 |
+| [vibe-check-skill](https://github.com/yinboliu-git/vibe-check-skill) | — | AI 代码质量审查 | vibe-check 打分，daily-skills 执行日常任务 |
 
 ## 贡献
 
@@ -119,121 +225,7 @@ dev-daily-skills/
 - [ ] 有至少一个 Example 展示正确用法
 - [ ] SKILL.md 不超过 200 行
 
-      </details>
-    </td>
-    <td align="center">
-      <details>
-        <summary><strong>🇬🇧 English</strong></summary>
-
-## Why This?
-
-There are 1400+ Skills on GitHub, but **70% are subpar** — bloated, vaguely described, or one Skill doing five things. Fewer than 10 survive daily use.
-
-`dev-daily-skills` only includes skills you'll **actually use every day**:
-
-- **Single-purpose** — One Skill, one problem
-- **Precise triggers** — Descriptions use phrases real people say
-- **Hard gates** — Critical steps are enforced via `<HARD-GATE>`, not suggested
-- **Examples included** — Do-this-not-that examples in every skill
-
-## Installation
-
-```bash
-# Clone to project-level skills directory
-git clone https://github.com/yinboliu-git/dev-daily-skills.git .claude/skills/dev-daily-skills
-
-# Or clone to personal skills directory (available across all projects)
-git clone https://github.com/yinboliu-git/dev-daily-skills.git ~/.claude/skills/dev-daily-skills
-```
-
-## What's Inside
-
-| Skill | Trigger | Problem Solved |
-|-------|---------|---------------|
-| **git-commit** | "commit my changes" | Never stare at a blank commit message again |
-| **systematic-debug** | "debug this" | Observe → Hypothesize → Test → Fix. No more guessing. |
-| **safe-refactor** | "refactor this" | No tests? No refactor. Change, verify, repeat. |
-| **code-review** | "review my code" | Severity-ranked review: correctness first, style last. |
-| **doc-generator** | "document this function" | Documents purpose and contract, not syntax. |
-| **test-first** | "write tests" | RED → GREEN → REFACTOR. No implementation before a failing test. |
-| **pr-description** | "create a PR" | Structured PR description from your branch diff. |
-
-## Usage Examples
-
-**Scenario 1: Daily Commit**
-```
-You: commit my changes
-Claude: Generates Conventional Commits message, asks whether to commit
-```
-
-**Scenario 2: Debugging**
-```
-You: debug this — the login page doesn't redirect after submit
-Claude: Observe → Hypothesize → Test → Fix
-```
-
-**Scenario 3: Test Before Refactor**
-```
-You: write tests for the payment module, then refactor it
-Claude: test-first → safe-refactor, two skills chained automatically
-```
-
-**Scenario 4: Pre-PR Checklist**
-```
-You: review my changes, then create a PR
-Claude: code-review → pr-description, one-stop PR readiness
-```
-
-## Design Principles
-
-Every skill follows community-validated best practices:
-
-1. **Generate first, clarify second** — Output immediately, flag assumptions after
-2. **Hard gates at critical checkpoints** — Non-negotiable enforcement (e.g., no refactor without tests)
-3. **Anti-pattern side-by-side** — DON'T/DO tables, not paragraphs
-4. **Quality Checklist** — Self-audit before delivering
-5. **Under 200 lines** — Brevity is a feature, not laziness
-
-## File Structure
-
-```
-dev-daily-skills/
-├── README.md
-└── skills/
-    ├── git-commit/SKILL.md
-    ├── systematic-debug/SKILL.md
-    ├── safe-refactor/SKILL.md
-    ├── code-review/SKILL.md
-    ├── doc-generator/SKILL.md
-    ├── test-first/SKILL.md
-    └── pr-description/SKILL.md
-```
-
-## Complementary Projects
-
-`dev-daily-skills` focuses on **high-frequency daily tasks**. It complements rather than competes with:
-
-| Project | Star | Positioning | Relationship |
-|---------|------|------------|-------------|
-| [superpowers](https://github.com/obra/superpowers) | ~204K | Full SDLC workflow | They handle epics; we handle micro-tasks |
-| [agent-skills](https://github.com/addyosmani/agent-skills) | ~50K | Production-grade practices | They set standards; we boost efficiency |
-| [karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) | ~133K | LLM coding wisdom distilled | They teach philosophy; we ship workflows |
-
-## Contributing
-
-PRs welcome. Before submitting:
-
-- [ ] Single-purpose: one Skill, one job
-- [ ] Description includes real phrases users actually say
-- [ ] Hard gates on unskippable steps
-- [ ] Complete quality checklist present
-- [ ] At least one example showing correct usage
-- [ ] Under 200 lines
-
-      </details>
-    </td>
-  </tr>
-</table>
+</details>
 
 ---
 
